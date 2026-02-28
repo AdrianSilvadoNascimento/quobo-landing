@@ -1,46 +1,20 @@
-# Quobo Landing (Next.js)
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Landing page da Quobo migrada para **Next.js + TailwindCSS + daisyUI**.
+# Run and deploy your AI Studio app
 
-## Stack
-- Next.js 15 (App Router)
-- React 19
-- TailwindCSS (instalado via pacote)
-- daisyUI (plugin do Tailwind)
+This contains everything you need to run your app locally.
 
-## Estrutura
+View your app in AI Studio: https://ai.studio/apps/drive/1vFCngj7JJttlWNEciairEgLDjOk0uxNZ
 
-## Status da migração
-- Arquitetura oficial: **Next.js App Router** (`app/`, `views/landing/`, `components/layout`, `components/sections`).
-- Cleanup em 2 commits documentado em `docs/migration-cleanup.md`.
-- `app/`: rotas e layout (`/` e `/terms`)
-- `views/landing/`: composição das views
-- `components/layout/`: Navbar e Footer
-- `components/sections/`: seções da landing
-- `public/`: assets estáticos (`quobo-icon.svg`)
+## Run Locally
 
-## Rodar localmente
-1. Instale dependências:
-   ```bash
-   npm install
-   ```
-2. Suba o ambiente de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
-3. Acesse:
-   - Home: `http://localhost:3000`
-   - Termos: `http://localhost:3000/terms`
+**Prerequisites:**  Node.js
 
-## Build de produção
-```bash
-npm run build
-npm run start
-```
 
-## Checklist de entrega
-1. `npm install`
-2. `npm run build` sem erros
-3. Revisar SEO (`title`, `description`, favicon)
-4. Validar navegação desktop/mobile e âncoras
-5. Publicar (Vercel recomendado para Next.js)
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
