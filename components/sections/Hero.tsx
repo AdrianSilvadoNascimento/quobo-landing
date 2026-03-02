@@ -1,3 +1,5 @@
+const env = process.env.NEXT_PUBLIC_APP_URL;
+
 export function Hero() {
   return (
     <section className="pt-28 pb-20 bg-gradient-to-b from-white to-blue-50">
@@ -8,7 +10,7 @@ export function Hero() {
           <p className="text-slate-600 text-base md:text-lg mt-6">Controle produtos, faça auditorias e conte estoque pelo celular.</p>
           <p className="text-slate-500 text-sm mt-3">14 dias grátis. Sem cartão.</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="https://staging.quobo.io/" className="btn bg-primary hover:bg-primary-dark text-white border-none">Começar grátis</a>
+            <a href={`${env}/register`} target="_blank" rel="noopener noreferrer" className="btn bg-primary hover:bg-primary-dark text-white border-none">Começar grátis</a>
             <a href="#pricing" className="btn bg-slate-50 border border-slate-300 text-slate-700 hover:bg-slate-100">Ver planos</a>
           </div>
         </div>

@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from 'react';
 
+const env = process.env.NEXT_PUBLIC_APP_URL;
+
 type Cycle = 'mensal' | 'semestral' | 'anual';
 
 type Tier = {
@@ -37,9 +39,9 @@ export function Pricing() {
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center">Pricing simples e transparente</h2>
         <p className="text-slate-600 text-center mt-4">Escolha entre mensal, semestral ou anual. Cancele quando quiser.</p>
         <div className="flex justify-center mt-8">
-          <div className="join bg-white p-1 rounded-full border border-slate-300">
+          <div className="flex gap-1 bg-white p-1 rounded-full border border-slate-300">
             {(['mensal', 'semestral', 'anual'] as Cycle[]).map((value) => (
-              <button key={value} onClick={() => setCycle(value)} className={`join-item btn btn-sm rounded-full px-6 ${cycle === value ? 'bg-primary hover:bg-primary-dark text-white border-none' : 'bg-white border-none text-slate-700'}`}>
+              <button key={value} onClick={() => setCycle(value)} className={`btn btn-sm rounded-full px-6 ${cycle === value ? 'bg-primary hover:bg-primary-dark text-white border-none' : 'bg-white border-none text-slate-700'}`}>
                 {value[0].toUpperCase() + value.slice(1)}
               </button>
             ))}
@@ -53,7 +55,7 @@ export function Pricing() {
               <p className="text-3xl font-bold text-slate-900 mt-4">{formatMoney(plan.price)}</p>
               <p className="text-sm text-slate-500">/{cycle}</p>
               <ul className="mt-5 space-y-2 text-slate-600 text-sm">{plan.features.map((feature) => <li key={feature}>• {feature}</li>)}</ul>
-              <a href="https://staging.quobo.io/" className={`btn mt-6 w-full ${plan.highlight ? 'bg-primary hover:bg-primary-dark text-white border-none' : 'bg-slate-50 border border-slate-300 text-slate-700 hover:bg-slate-100'}`}>
+              <a href={`${env}/register`} target="_blank" rel="noopener noreferrer" className={`btn mt-6 w-full ${plan.highlight ? 'bg-primary hover:bg-primary-dark text-white border-none' : 'bg-slate-50 border border-slate-300 text-slate-700 hover:bg-slate-100'}`}>
                 {plan.cta}
               </a>
             </article>

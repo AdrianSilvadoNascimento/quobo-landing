@@ -13,9 +13,21 @@ export function TermsView() {
           </div>
         </div>
         <div className="space-y-4">
-          <div className="collapse collapse-plus bg-white border border-slate-200 rounded-xl"><input type="radio" name="terms" defaultChecked /><div className="collapse-title text-xl font-medium text-slate-800">I. O Período de Experiência (Trial)</div><div className="collapse-content text-slate-600"><p>Você tem 14 dias para testar o Quobo com todas as funcionalidades sem cartão de crédito.</p></div></div>
-          <div className="collapse collapse-plus bg-white border border-slate-200 rounded-xl"><input type="radio" name="terms" /><div className="collapse-title text-xl font-medium text-slate-800">Cláusula IV – Do Período de Teste e Exclusão de Dados</div><div className="collapse-content text-slate-600"><p>Após o prazo de inatividade sem assinatura vigente, os dados poderão ser excluídos definitivamente.</p></div></div>
-          <div className="collapse collapse-plus bg-white border border-slate-200 rounded-xl"><input type="radio" name="terms" /><div className="collapse-title text-xl font-medium text-slate-800">Cláusula V – Do Cancelamento e Vigência</div><div className="collapse-content text-slate-600"><p>O cancelamento interrompe a renovação automática e mantém acesso até o fim do ciclo pago.</p></div></div>
+          <div className="collapse collapse-arrow bg-white border border-slate-200 rounded-xl">
+            <input type="checkbox" />
+            <div className="collapse-title text-xl font-medium text-slate-800">I. O Período de Experiência (Trial)</div>
+            <div className="collapse-content text-slate-600"><p>Você tem 14 dias para testar o Quobo com todas as funcionalidades sem cartão de crédito.</p></div>
+          </div>
+          <div className="collapse collapse-arrow bg-white border border-slate-200 rounded-xl">
+            <input type="checkbox" />
+            <div className="collapse-title text-xl font-medium text-slate-800">Cláusula IV – Do Período de Teste e Exclusão de Dados</div>
+            <div className="collapse-content text-slate-600"><p>Após o prazo de inatividade sem assinatura vigente, os dados poderão ser excluídos definitivamente.</p></div>
+          </div>
+          <div className="collapse collapse-arrow bg-white border border-slate-200 rounded-xl">
+            <input type="checkbox" />
+            <div className="collapse-title text-xl font-medium text-slate-800">Cláusula V – Do Cancelamento e Vigência</div>
+            <div className="collapse-content text-slate-600"><p>O cancelamento interrompe a renovação automática e mantém acesso até o fim do ciclo pago.</p></div>
+          </div>
         </div>
         <div className="mt-12 text-center"><Link href="/" className="btn btn-ghost">Voltar para a página inicial</Link></div>
       </div>
